@@ -1,0 +1,369 @@
+@charset "UTF-8";
+/* 
+	@名称: reset
+	@功能: 重设浏览器默认样式
+*/
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html { color: #000; background: #fff; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0; -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+
+/* 1.去除android a/button/input标签被点击时产生的边框 2.去除ios a标签被点击时产生的半透明灰色背景 */
+a, button, input { -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+/* HTML5 媒体文件跟 img 保持一致 */
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+/* 设置页面字体大小 */
+html { font-size: 62.5%; }
+
+body { font-size: 1rem; font-family: Arial,Helvetica,sans-serif; }
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+button, input, select, textarea { font: 12px/1.5 sans-serif; }
+
+input, select, textarea { font-size: 100%; -webkit-appearance: none; }
+
+/* 改变i的斜体 */
+i { font-style: normal; }
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* IE bug fixed: th 不继承 text-align*/
+th { text-align: inherit; }
+
+/* 去除默认边框 */
+fieldset, img { border: 0; }
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe { display: block; }
+
+/* 去掉 firefox 下此元素的边框 */
+abbr, acronym { border: 0; font-variant: normal; }
+
+/* 一致的 del 样式 */
+del { text-decoration: line-through; }
+
+address, caption, cite, code, dfn, em, th, var { font-style: normal; font-weight: 500; }
+
+/* 去掉列表前的标识, li 会继承 */
+ol, ul { list-style: none; }
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption, th { text-align: left; }
+
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 500; }
+
+q:before, q:after { content: ''; }
+
+/* 统一上标和下标 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+input[type="button"], input[type="submit"], input[type="reset"] { -webkit-appearance: none; }
+
+/* 让链接在 hover 状态下显示下划线 */
+a:hover { text-decoration: none; }
+
+/* 默认不显示下划线，保持页面简洁 */
+ins, a { text-decoration: none; }
+
+img {
+	vertical-align: top;
+}
+
+/* 清理浮动 */
+.fn-clear:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+.fn-clear { zoom: 1; /* for IE6 IE7 */ }
+
+/* 隐藏, 通常用来与 JS 配合 */
+body .fn-hide { display: none; }
+
+/* 设置内联, 减少浮动带来的bug */
+.fn-left, .fn-right { display: inline; }
+
+.fn-left { float: left; }
+
+.fn-right { float: right; }
+
+.w1000 {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+body {
+	background-color: rgb(231,231,231);
+}
+
+/* header  */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	background-color: rgb(9,52,84);
+}
+
+.logo {
+	width: 325px;
+}
+
+.nav {
+	width: 600px;
+	padding: 40px 0;
+}
+
+.nav li {
+	float: right;
+}
+
+.nav li a {
+	display: block;
+	margin: 0 15px;
+	padding: 0 10px;
+	line-height: 40px;
+	color: rgb(255,255,255);
+	font-size: 16px;
+	font-family: "Microsoft Yahei";
+	word-spacing: 20px;
+}
+
+/*.nav li .active {
+	color: rgb(9,52,84);
+	background-color: rgb(255,255,255);
+	border-radius: 5px;
+}*/
+
+
+/* article */
+.article {
+	padding-top: 120px;
+}
+
+.banner {
+	width: 100%;
+	height: 440px;
+	background: url(../images/banner.jpg);
+	background-repeat: no-repeat;
+	background-position: left 120px;
+	background-attachment: fixed;
+}
+
+/* service */
+.service-box {
+	width: 100%;
+	background: url(../images/background.jpg);
+}
+
+.service-container {
+	margin-left:-104px;
+	padding-bottom: 80px;
+}
+
+.service-content {
+	display: inline;
+	margin-left: 104px;
+	width: 264px;
+	text-align: center;
+}
+
+.service-content img {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.service-content span {
+	font-family: "Microsoft Yahei";
+	font-size: 30px;
+	color: rgb(9,52,84);
+}
+
+/* products */
+/*.products-container {
+	height: 640px
+}*/
+
+.products-items {
+	padding: 0 10px;
+}
+
+.products-items dl {
+	display: inline;
+	width: 474px;
+	height: 180px;
+	margin: 0 0 12px 12px;
+	background-color: rgb(255,255,255);
+}
+
+.products-items dt {
+	width: 240px;
+	height: 180px;
+	margin-right: 15px;
+	/*overflow: hidden;*/
+}
+
+.products-items dt img {
+	-webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    -ms-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
+	box-shadow: 1px 1px 1px rgb(139,139,139);
+	cursor: pointer;
+}
+
+.products-items dt img:hover {
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	transform: scale(1.5);
+}
+
+.products-items dd {
+	width: 200px;
+	padding-top: 25px;
+}
+
+.products-items dd h3 {
+	margin-bottom: 10px;
+	font-size: 20px;
+	color: rgb(51,51,51);
+}
+
+.products-items dd p {
+	line-height: 30px;
+	font-size: 14px;
+	color: rgb(153,153,153);
+}
+
+.p-bar-box {
+	padding: 20px 0 50px;
+	text-align: center;
+}
+
+.p-bar-box .p-bar {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0 15px;
+	background-color: rgb(9,52,84);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.p-bar-box .cur {
+	width: 16px;
+	height: 16px;
+	border: 2px solid rgb(9,52,84);
+	background-color: rgb(255,255,255);
+}
+
+
+/* about us */
+.about-box {
+	width: 100%;
+	height: 636px;
+	background: url(../images/about-bg.png) repeat-x;
+	background-position: center bottom;
+	background-size: cover;
+}
+
+.about-us-img {
+	width: 450px;
+	height: 428px;
+	margin-right: 20px;
+	background-color: #afafaf;
+}
+
+.about-us-content {
+	line-height: 40px;
+	font-family: "Microsoft Yahei";
+	font-size: 20px;
+	color: rgb(255,255,255);
+}
+
+.about-us-content p {
+	padding-top: 26px;
+}
+
+/* title */
+.title01, .title02 {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	padding: 40px 0;
+}
+
+.line-bg {
+	width: 328px;
+	height: 2px;
+	margin-top: 25px;
+	background-color: rgb(9,52,84);
+}
+
+.title02 .line-bg {
+	background-color: rgb(255,255,255);
+}
+
+.title01 h2,.title02 h2 {
+	width: 320px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: "Microsoft Yahei";
+	line-height: 52px;
+	font-size: 30px;
+	color: rgb(9,52,84);
+}
+
+.title02 h2 {
+	color: rgb(255,255,225);
+}
+
+
+/* footer */
+.footer {
+	width: 100%;
+	height: 150px;
+	font-family: "Microsoft Yahei";
+	color: rgb(255,255,255);
+	background-color: rgb(9,52,84);
+}
+
+.address {
+	width: 520px;
+	padding-top: 16px;
+	line-height: 40px;
+	font-size: 14px;
+}
+
+.phone-box {
+	width: 350px;
+	padding: 32px 0 0;
+}
+
+.icon-phone {
+	margin: 3px 20px 0 25px;
+	width: 90px;
+	height: 90px;
+	background: url(../images/footer-01.png);
+}
+
+.phone-box p {
+	line-height: 46px;
+	font-size: 14px;
+}
+
+.phone-box p em {
+	font-size: 20px;
+}
